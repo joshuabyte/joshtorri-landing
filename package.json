@@ -1,0 +1,23 @@
+{
+  "name": "joshtorri-landing",
+  "version": "1.0.0",
+  "description": "Josh's personal landing page.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protondk/joshtorri-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/protondk/joshtorri-landing/issues"
+  },
+  "homepage": "https://github.com/protondk/joshtorri-landing#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
