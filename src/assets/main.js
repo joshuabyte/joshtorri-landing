@@ -1,4 +1,5 @@
-const API = "https://youtube-v31.p.rapidapi.com/search?channelId=UCMdOvEOcnhsCq1mA_46lbWQ&part=snippet%2Cid&order=date&maxResults=5";
+const API =
+  "https://youtube-v31.p.rapidapi.com/search?channelId=UCMdOvEOcnhsCq1mA_46lbWQ&part=snippet%2Cid&order=date&maxResults=5";
 
 const content = null || document.getElementById("content");
 
@@ -20,7 +21,9 @@ async function fetchData(urlApi) {
   try {
     const videos = await fetchData(API);
     let view = `
-    ${videos.items.map(video => `
+    ${videos.items
+      .map(
+        (video) => `
     <div class="group relative">
         <div
           class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
@@ -33,10 +36,30 @@ async function fetchData(urlApi) {
           </h3>
         </div>
       </div>
-    `).slice(0,1).join('')}
+    `
+      )
+      .slice(0, 1)
+      .join("")}
         `;
     content.innerHTML = view;
   } catch (error) {
     console.log(error);
   }
 })();
+
+
+//Playground
+
+// export async function runCode(url) {
+//     try {
+//      new URL(url);
+//      const response = await fetch(url);
+//      return response.json();
+//     } catch(error) {
+//       if (error.message === "Failed to construct 'URL': Invalid URL"){
+//         throw new Error('Invalid URL');
+//       } else {
+//         throw new Error('Something was wrong');
+//       }
+//     }
+//   }
